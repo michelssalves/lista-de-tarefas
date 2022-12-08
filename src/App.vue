@@ -11,6 +11,7 @@
   </div>
 </template>
 <script>
+//aqui e importado os componentes
 import TaskProgress from "./components/TaskProgress.vue";
 import NewTask from "./components/NewTask.vue";
 import TaskGrid from "./components/TaskGrid.vue";

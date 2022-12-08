@@ -15,8 +15,9 @@ export default {
   props: {
     task: { type: Object, required: true },
   },
-
+  
   computed: {
+    //avalia qual classe sera utilizada no componente vermelha ou verde
     stateClass() {
       return {
         pending: this.task.pending,

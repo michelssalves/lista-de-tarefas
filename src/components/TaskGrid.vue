@@ -2,15 +2,16 @@
 <template>
   <div class="task-grid">
     <template v-if="tasks.length">
+      <!-- um for que percorre o obejto tasks gerando divs que representam a tarefa 
+      todas vez que roda o for é passado o valor por parametro para o objeto :task=task-->
       <Task
-        v-for="(task, i) in tasks"
-        :key="task.name"
+        v-for="(task, i) in tasks" :key="task.name"
         @taskDeleted="$emit('taskDeleted', i)"
         @taskStateChanged="$emit('taskStateChanged', i)"
         :task="task"
       ></Task>
     </template>
-    <p v-else class="no-task">Sua vida eta em dia =]</p>
+    <p v-else class="no-task">Sua vida está em dia =]</p>
   </div>
 </template>
 <script>
